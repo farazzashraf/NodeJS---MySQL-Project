@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("includes/head") %>
+        <link href="/styles/post-detail.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include("includes/header") %>
+        <div id="all-main">
+            <main id="post-detail">
+                <time datetime="<%= post.date %>">
+                    <%= post.humanReadableDate %>
+                </time>
+                
+                <h1>
+                    <%= post.title %>
+                </h1>
+                <div id="post-meta">
+                    <h2>
+                        By <%= post.name %>
+                    </h2>
+                    <div>
+                        <div>
+                            <p id="body">
+                                <%= post.content %>
+                            </p>
+                        </div>
+            </main>
+        </div>
+</body>
+
+</html>
